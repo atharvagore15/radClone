@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material";
 
-// A label placed above a form control, as in the RadleyCare design.
 export default function Field({ id, label, children }) {
   return (
     <Box sx={{ flex: 1, minWidth: 0 }}>

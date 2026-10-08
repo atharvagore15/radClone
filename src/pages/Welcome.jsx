@@ -20,7 +20,7 @@ export default function Welcome() {
           <Link to="/UserTypeForRadley" className="btn btn--outline">
             Sign up
           </Link>
-          <Link to="/login" className="btn btn--solid">
+          <Link to="/UserTypeLogin" className="btn btn--solid">
             Log in
           </Link>
         </div>

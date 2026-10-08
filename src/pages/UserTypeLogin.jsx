@@ -1,25 +1,26 @@
-import { Box, ButtonBase, Link as MuiLink, Typography } from "@mui/material";
+import { Box, ButtonBase, Typography } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
+
 import logo from "../assets/radleycare-logo.png";
 import clientIcon from "../assets/client-icon.png";
 import peerIcon from "../assets/peer-icon.png";
 
-const options = [
-  {
-    to: "/patientsignup",
-    icon: clientIcon,
-    title: "I'm a Client",
-    subtitle: "Looking to get personalised care",
-  },
-  {
-    to: "/signup",
-    icon: peerIcon,
-    title: "I'm a Peer-Supporter",
-    subtitle: "Seeking to provide care",
-  },
-];
+export default function UserTypeLogin() {
+  const options = [
+    {
+      to: "/patientlogin",
+      icon: clientIcon,
+      title: "I'm a Client",
+      subtitle: "Looking to get personalised care",
+    },
+    {
+      to: "/login",
+      icon: peerIcon,
+      title: "I'm a Peer-Supporter",
+      subtitle: "Seeking to provide care",
+    },
+  ];
 
-export default function UserTypeSelect() {
   return (
     <Box
       sx={{
@@ -29,7 +30,6 @@ export default function UserTypeSelect() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        gap: 4,
         px: 2,
         py: 4,
         background: "linear-gradient(180deg, #e8f5f2 0%, #ffffff 80%)",
@@ -39,7 +39,7 @@ export default function UserTypeSelect() {
         component="img"
         src={logo}
         alt="RadleyCare"
-        sx={{ height: 44, width: "auto" }}
+        sx={{ height: 44, width: "auto", mb: "38px" }}
       />
 
       <Box
@@ -50,7 +50,8 @@ export default function UserTypeSelect() {
           maxWidth: 485,
           display: "flex",
           flexDirection: "column",
-          gap: 2,
+          gap: "15px",
+          mb: "28px",
         }}
       >
         {options.map((option) => (
@@ -70,8 +71,8 @@ export default function UserTypeSelect() {
               textAlign: "left",
               bgcolor: "#fff",
               border: "1px solid #d5dadd",
-              borderRadius: "12px",
-              transition: "border-color 0.15s ease, box-shadow 0.15s ease"
+              borderRadius: "12px"
+              
             }}
           >
             <Box
@@ -101,6 +102,7 @@ export default function UserTypeSelect() {
                 sx={{
                   fontSize: "1rem",
                   fontWeight: 500,
+                  lineHeight: 1.5,
                   color: "text.secondary",
                   transition: "color 0.15s ease",
                 }}
@@ -118,11 +120,10 @@ export default function UserTypeSelect() {
           textAlign: "center",
           fontSize: "0.8125rem",
           fontWeight: 500,
-          lineHeight: 1.5,
+          lineHeight: 1.25,
         }}
       >
-         By continuing, you agree to our Terms of Service and Privacy Policy
-
+        By continuing, you agree to our Terms of Service and Privacy Policy
       </Typography>
     </Box>
   );
